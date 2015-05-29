@@ -1,6 +1,4 @@
-Server Setup
-
-Server
+##Server Setup
 
 1. Install Node.js
 2. Move the “Server” folder to the path you want to run the server.
@@ -11,9 +9,9 @@ Server
 You can see a socket.io testing chat room if successful.
 
 
-Html Clients (Javascript):
+##Html Clients (Javascript):
 
-Setup
+#Setup
 
 1. Open the “Front-End” folder and move ”libs” folder to the project you want to work on.
 2. Include Socket IO and EventCenter in the index:
@@ -21,7 +19,7 @@ Setup
 	<script src="lib/connection.js"></script>
 3. Change the server url by changing “serverURL” variable.
 
-Receiving Data
+#Receiving Data
 
 1. Register event and callback function when initialized. Ex:
 	eventCenter.registerU2PEvent("evnetName", OnSomethingHappen);
@@ -30,20 +28,20 @@ Receiving Data
 		// Write your code here
 	}
 
-Sending Data
+#Sending Data
 
 1. Call this function when you want to send data:
 	eventCenter.sendP2UEvent("eventName", arg1, arg2, arg3,........);
 
-Unity Client
+##Unity Client
 
-Setup
+#Setup
 
 1. Import the “Unity” folder to into the Unity project you wish to work on.
 2. Drag the prefab “ETCServerConnection” to the scene.
 3. Change the server url in the SocketIOCompomet.cs->url variable
 
-Receiving Data
+#Receiving Data
 1. Register event and callback function at Start(). Ex:
  	eventCenter.RegisterP2UEvent("evnetName", OnSomethingHappen);
 2. Setup the callback function. Ex:
@@ -58,7 +56,7 @@ I've thought about using "params" keyword so we can have unlimited number of arg
 
 2. You must cast the argument from string to int (or float) yourself.
 
-Sending Data
+#Sending Data
 
 Call this function when you want to send data:
 	eventCenter.SendU2PEvent(int receiverPlayerID, string eventName, string arg1, string arg2......);
