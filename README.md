@@ -29,7 +29,6 @@ You can see a socket.io testing chat room if successful.
 	eventCenter.sendP2UEvent("eventName", arg1, arg2, arg3,........);
 
 #Unity Client
-
 ##Setup
 1. Import the “Unity” folder to into the Unity project you wish to work on.
 2. Drag the prefab “ETCServerConnection” to the scene.
@@ -56,3 +55,6 @@ Call this function when you want to send data:
 
 Note that you must specific the player's id you're sending to in the first argument.
 It's OK to send event without arguments(arg1, arg2...), but the first two parameter of the function is mandatory.
+
+Note: We used unity-socket.io to communicate between Unity and server.
+For more information, see here: https://github.com/fpanettieri/unity-socket.io
